@@ -18,23 +18,26 @@ driver.get("https://instaling.pl/teacher.php?page=login")
 
 Login = driver.find_element_by_xpath('//*[@id="log_email"]')
 
-#Login.send_keys("4g1293795")#JA
-#Login.send_keys("4g9630262")#Stachu
-Login.send_keys("4g1524432")#Michał
+Login.send_keys("5g1310675")#JA
+#Login.send_keys("5g1011844")#Stachu
+#Login.send_keys("5g1595316")#Michał
 
 Password = driver.find_element_by_xpath('//*[@id="log_password"]')
 
-#Password.send_keys("zhubx")#JA
-#Password.send_keys("cphhi")#Stachu
-Password.send_keys("excpm")#Michał
+Password.send_keys("idtks")#JA
+#Password.send_keys("gcajb")#Stachu
+#Password.send_keys("ghzex")#Michał
 
 Password.send_keys(Keys.RETURN)
 
-#driver.get("https://instaling.pl/ling2/html_app/app.php?child_id=2092959")#Ja
-#driver.get("https://instaling.pl/ling2/html_app/app.php?child_id=2092956")#Stachu
-driver.get("https://instaling.pl/ling2/html_app/app.php?child_id=2092949")#Michał
+driver.get("https://instaling.pl/student/pages/mainPage.php?student_id=2193030")#Ja
+#driver.get("https://instaling.pl/student/pages/mainPage.php?student_id=2193027")#Stachu
+#driver.get("https://instaling.pl/student/pages/mainPage.php?student_id=2193018")#Michał
 
-Start_session = driver.find_element_by_xpath('//*[@id="start_session_button"]/h4').click()
+#Start_session = driver.find_element_by_xpath('//*[@id="start_session_button"]/h4').click()
+Start_session = driver.find_element_by_xpath('//*[@id="student_panel"]/p[1]/a').click()
+warunki = driver.find_element_by_xpath('//*[@id="start_session_button"]').click()
+
 
 time.sleep(0.1)
 
