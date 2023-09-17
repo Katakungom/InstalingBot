@@ -1,79 +1,53 @@
-dostęp do Internetu : der Internetzugang
-ponowne zjednoczenie : die Wiedervereinigung
-przemysł : die Industrie
-przestrzeń, trasa : die Strecke
-nacisnąć klawisz / przycisk : auf eine Taste drücken
-pendrive : der Stick
-adres e-mailowy : die E-Mail-Adresse
-zepsuty : kaputt
-klikać : klicken
-kursować : pendeln
-środek transportu : das Verkehrsmittel
-zamek : das Schloss
-postój : der Zwischenstopp
-wylogować się : sich ausloggen
-zainstalować : installieren
-dysk twardy : die Festplatte
-wyłączony : ausgeschaltet
-pchli targ : der Flohmarkt
-zeskanować : einscannen
-nieograniczony : unbegrenzt
-akumulator, ładowarka (nazwa skrócona) : der Akku
-włączony : eingeschaltet
-klasztor : das Kloster
-klawiatura : die Tastatur
-okolica : die Umgebung
-podać hasło : das Passwort eingeben
-nacisnąć guzik : einen Knopf drücken
-ściągnąć (z internetu) : herunterladen
-pustynia : die Wüste
-bydło : das Vieh
-obsługa komputera : die Computerbedienung
-powrót : die Rückfahrt
-szukać w internecie : im Internet recherchieren
-kierunek : die Richtung
-przyzwyczajać : gewöhnen
-faks : das Faxgerät
-łącze internetowe : der Internetanschluss
-zapisywać (dane) : speichern
-zator, korek : der Stau
-pośpiech : die Hektik
-teren, obszar, terytorium, obręb : das Gebiet
-strona internetowa : die Webseite
-izba niższa niemieckiego parlamentu : der Bundestag
-informować o : informieren über
-ekran : der Bildschirm
-zainstalować program : ein Programm installieren
-przemierzać : durchqueren
-było super! : es war Spitze
-lampa naftowa : die Petroleumlampe
-dzień powszedni z wykorzystaniem mediów : der Medienalltag
-na bieżąco : auf dem Laufenden
-mól książkowy : die Leseratte
-program sportowy : die Sportsendung
-sznur, sznurek, przewód, kabel : die Schnur
-ulubiona muzyka / gatunek muzyczny : die Lieblingsmusik
-dług : die Schuld
-pilna potrzeba, nagła potrzeba : der Notfall
-ubezpieczenie : die Versicherung
-magia : die Magie
-masa ludzi : die Menschenmasse
-niebezpieczeństwo, ryzyko : die Gefahr
-dzieło sztuki : das Kunstwerk
-umowa na telefon komórkowy : der Handyvertrag
-cyfryzacja : die Digitalisierung
-lokomotywa : die Dampflok
-druk w książce : der Buchdruck
-zależny od : abhängig von
-wynalazca : der Erfinder
-rzecz : das Ding
-straż pożarna : die Feuerwehr
-powóz, dorożka : die Kutsche
-wieloraki, wielorako : vielfältig
-o niskich kosztach, przy niskich kosztach : kostengünstig
-wystarczający : ausreichend
-łatwo dostępny : zugänglich
-zafascynowany sportem : sportbegeistert
-odtwarzać, grać : abspielen
-zajmować się czymś : sich befassen mit
-wizualizować : visualisieren
+Deine schwarze _____ wird bei mir nicht funktionieren!|magia|die Magie
+Dieser Roman zeigt ein ____________ Bild des menschlichen Lebens.|wieloraki, wielorako|vielfältig
+Sagst du gerade, dass mein Leben in ______ ist?|niebezpieczeństwo, ryzyko|die Gefahr
+Das jüngste Ausstellungsstück ist die ________ von Jahr 1930.|lokomotywa|die Dampflok
+Rufen Sie mich im _______ unter dieser Nummer an.|pilna potrzeba, nagła potrzeba|der Notfall
+Darf ich dir ein paar Lider von Rammstein _________?|odtwarzać, grać|abspielen
+Wir werden Sie auch über Änderungen ___ ___ _________ halten.|na bieżąco|auf dem Laufenden
+Hast du ____________?|ubezpieczenie|die Versicherung
+Das ist sehr _____________!|o niskich kosztach, przy niskich kosztach|kostengünstig
+_______________ ist eine Voraussetzung für Online-Zugänglichkeit.|cyfryzacja|die Digitalisierung
+Ich kann nicht sehen, was auf dem __________ steht.|ekran|der Bildschirm
+Die ______ ist sehr schwach.|sznur, sznurek, przewód, kabel|die Schnur
+Heute ist jeden Tag ein ____________.|dzień powszedni z wykorzystaniem mediów|der Medienalltag
+Die Inuit sind die ________ der Kajaks.|wynalazca|der Erfinder
+Ich bin eine _________.|mól książkowy|die Leseratte
+Meine Mutter _______ ____ ___ der Molekularbiologie.|zajmować się czymś|sich befassen mit
+Die Informationen müssen aktuell, korrekt und __________ sein.|łatwo dostępny|zugänglich
+Ich kann das mir nicht vorstellen. Könntest du das _____________?|wizualizować|visualisieren
+Kinder sind ___ ihren Eltern ________.|zależny od|abhängig von
+Dieses Spiel wird hauptsächlich mit der ________ und dem Gamepad gesteuert.|klawiatura|die Tastatur
+Der _________ in diesem Buch ist leider unlesbar.|druk w książce|der Buchdruck
+Die Prüfung ist bestanden, wenn mindestens die Note "___________" vergeben wurde.|wystarczający|ausreichend
+Sein Garten ist ein _________.|dzieło sztuki|das Kunstwerk
+Ich war auf Anikas Geburtstagsparty und __ ___ ______!|było super!|es war Spitze
+Da fährt eine wunderbare _______ vorüber.|powóz, dorożka|die Kutsche
+Tonya reitet und schwimmt, weil sie _______________ ist.|zafascynowany sportem|sportbegeistert
+Gib mir bitte das ____.|rzecz|das Ding
+Ignacy Łukasiewicz ist der Miterfinder der ______________.|lampa naftowa|die Petroleumlampe
+Im Geschäft gab es eine _____________.|masa ludzi|die Menschenmasse
+Er hat viele ________ bei der Bank.|dług|die Schuld
+Meine ______________ ist Rammstein und Einstürzende Neubauten.|ulubiona muzyka / gatunek muzyczny|die Lieblingsmusik
+Ihr ____________ läuft in weniger als zwei Monate aus.|umowa na telefon komórkowy|der Handyvertrag
+Rufen Sie die _________!|straż pożarna|die Feuerwehr
+Wie gewünscht, habe ich Martins Handy _______.|hakować|hacken
+Eine Familie brachte die Kinder zum _______________.|park rozrywki|der Vergnügungspark
+___________ übertragen gesprochene Texte mündlich von einer Sprache in die andere.|tłumacz ustny|der Dolmetscher
+Das Publikum klatschte den _____________ für ihre Leistung Beifall.|aktor|der Schauspieler
+Seit 2004 ist Polen Mitglied der ___________ _____.|Unia Europejska|die Europäische Union
+Sind Sie _________?|obcokrajowiec|der Ausländer
+Die Polizisten arbeiten ___ ___ _____.|przez całą dobę, w dzień i w nocy|Tag und Nacht
+Dieses Jahr findet _________________ statt.|mistrzostwo świata|die Weltmeisterschaft
+Ich will eine ________ gründen.|fundacja|die Stiftung
+Vielleicht kommst du nächste Woche zum _____________?|gra w szachy|das Schachspielen
+In meinem Land leben viele Generationen _____ _____ ____.|żyć pod jednym dachem|unter einem Dach leben
+Unser Personal ist ____________ und ist sehr hilfreich.|dwujęzyczny|zweisprachig
+Eine Pandemie kann sich über Länder __ der ______ ____ ausbreiten.|na całym świecie|in der ganzen Welt
+Bitte ____________ Sie uns für weitere Informationen.|kontaktować się|kontaktieren
+Ich will nicht den ________ __________.|wycierać podłogę|Fußboden aufwischen
+Peter ist sein erstes _________.|wnuczek|das Enkelkind
+Ich bin eine ________________ Mutter mit drei Kindern.|samotnie wychowujący dziecko|alleinerziehend
+Wann ____ du _______?|być urodzonym|geboren sein
+Der ___________ kehrte mit einer Goldmedaille ins Land zurück.|skoczek narciarski|der Skispringer
+________________ ist ein neuer Name für eine Familienform, die es schon sehr lange gibt.|rodzina patchworkowa|die Patchworkfamilie
