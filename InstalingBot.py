@@ -8,10 +8,12 @@ from selenium.webdriver.support import expected_conditions as EC
 import time
 import GetDictionary
 import GetUsers
+import FileIntegrityChecker
 
-start_time = time.perf_counter()
+FileIntegrityChecker.checkFiles()
 dictionary = GetDictionary.GetDictionary("slownik.txt")
 users = GetUsers.GetUsers('Users.txt')
+
 i = 1
 while i < len(users)+1:
     service = Service(executable_path='C:\Program Files (x86)\chromedriver.exe')
@@ -19,85 +21,82 @@ while i < len(users)+1:
 
     driver.get("https://instaling.pl/teacher.php?page=login")
 
+    Login = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, '//*[@id="log_email"]')))
     Login = driver.find_element_by_xpath('//*[@id="log_email"]')
-
     Login.send_keys(users[str(i)][1])#JA
 
+    Password = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, '//*[@id="log_password"]')))
     Password = driver.find_element_by_xpath('//*[@id="log_password"]')
-
     Password.send_keys(users[str(i)][2])#JA
-
     Password.send_keys(Keys.RETURN)
 
     driver.get("https://instaling.pl/student/pages/mainPage.php?student_id="+users[str(i)][0]+"")#Ja
 
     Start_session = driver.find_element_by_xpath('//*[@id="student_panel"]/p[1]/a').click()
-    #warunki = driver.find_element_by_xpath('//*[@id="start_session_button"]').click()
     sesja_przerwana = driver.find_element_by_xpath('//*[@id="continue_session_button"]').click()
-    #sesja_przerwana2 = driver.find_element_by_xpath('//*[@id="start_session_button"]').click()
-
 
     time.sleep(0.3)
-
+    word = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, '//*[@id="question"]/div[2]/div[2]')))
     word = driver.find_element_by_xpath('//*[@id="question"]/div[2]/div[2]').text
 
     while word != "Gratulacje!":
-
+        time.sleep(0.5)
         word = driver.find_element_by_xpath('//*[@id="question"]/div[2]/div[2]').text
         usage_example = driver.find_element_by_xpath('//*[@id="question"]/div[1]').text
 
         if usage_example not in dictionary:
-            time.sleep(1)
             try:
-                time.sleep(1)
+                Do_not_know = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, '//*[@id="dont_know_new"]')))
                 Do_not_know = driver.find_element_by_xpath('//*[@id="dont_know_new"]').click()
-                time.sleep(1)
+                Skip_question = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, '//*[@id="skip"]')))
                 Skip_question = driver.find_element_by_xpath('//*[@id="skip"]').click()
-                time.sleep(1)
-            except ElementNotInteractableException:             
+            except ElementNotInteractableException:
+
+                Answer = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, '//*[@id="answer"]')))
                 Answer = driver.find_element_by_xpath('//*[@id="answer"]')
-                
                 Answer.send_keys("a")
-                Next_question = driver.find_element_by_xpath('//*[@id="check"]/h4').click()
-                time.sleep(1)
+
+                AnswerCheck = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, '//*[@id="check"]/h4')))
+                AnswerCheck = driver.find_element_by_xpath('//*[@id="check"]/h4').click()
+
+                Translation = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, '//*[@id="word"]')))
                 Translation = driver.find_element_by_xpath('//*[@id="word"]').text
-                time.sleep(1)
-                Next_question = driver.find_element_by_xpath('//*[@id="nextword"]').click()
-                time.sleep(1)
+
+                try:
+                    Next_question = WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.XPATH, '//*[@id="nextword"]')))
+                    Next_question.click()
+                except ElementNotInteractableException as e:
+                        print(f"Error clicking 'Next Question': {e}")
+
                 file = open("slownik.txt", "a", encoding='utf-8')  
-                file.write(usage_example)
-                file.write("|")
-                file.write(word)
-                file.write("|")
-                file.write(Translation)
-                file.write("\n")
+                file.write(usage_example,"|",word,"|",Translation,"\n")
                 file.close()
                 dictionary = GetDictionary.GetDictionary("slownik.txt")
 
         else:
             if usage_example in dictionary.keys():
-                    time.sleep(1)
+
+                    Answer = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, '//*[@id="answer"]')))
                     Answer = driver.find_element_by_xpath('//*[@id="answer"]')
-                    time.sleep(1)
+
                     Answer.send_keys(dictionary[usage_example])
-                    Next_question = driver.find_element_by_xpath('//*[@id="check"]/h4').click()
-                    time.sleep(1)
-                    Next_question = driver.find_element_by_xpath('//*[@id="nextword"]').click()
-                    time.sleep(1)
-                
-        test_word=driver.find_element_by_xpath('//*[@id="summary"]/table/caption').text
+                    AnswerCheck = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, '//*[@id="check"]/h4')))
+                    AnswerCheck = driver.find_element_by_xpath('//*[@id="check"]/h4').click()
+
+                    try:
+                        Next_question = WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.XPATH, '//*[@id="nextword"]')))
+                        Next_question.click()
+                    except ElementNotInteractableException as e:
+                        print(f"Error clicking 'Next Question': {e}")
+                    time.sleep(0.5)
+        test_word = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, '//*[@id="summary"]/table/caption')))            
+        test_word = driver.find_element_by_xpath('//*[@id="summary"]/table/caption').text
         if test_word == "Gratulacje!":
             word = test_word
         else:
             word = word
-
-    time.sleep(1)
+    time.sleep(0.5)
+    Back_to_homepage = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, '//*[@id="return_mainpage"]')))
     Back_to_homepage = driver.find_element_by_xpath('//*[@id="return_mainpage"]').click()
-    time.sleep(1)
-
+    i=i+1
     driver.quit()
-
-    end_time = time.perf_counter()
-    elapsed_time = end_time - start_time
-    print(f"Elapsed time: {elapsed_time:.6f} seconds")
-    i+=1
