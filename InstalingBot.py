@@ -32,7 +32,9 @@ while i < len(users)+1:
     driver.get("https://instaling.pl/student/pages/mainPage.php?student_id="+users[str(i)][0]+"")#Ja
 
     Start_session = driver.find_element_by_xpath('//*[@id="student_panel"]/p[1]/a').click()
-    warunki = driver.find_element_by_xpath('//*[@id="start_session_button"]').click()
+    #warunki = driver.find_element_by_xpath('//*[@id="start_session_button"]').click()
+    sesja_przerwana = driver.find_element_by_xpath('//*[@id="continue_session_button"]').click()
+    #sesja_przerwana2 = driver.find_element_by_xpath('//*[@id="start_session_button"]').click()
 
 
     time.sleep(0.3)
@@ -47,15 +49,12 @@ while i < len(users)+1:
         if usage_example not in dictionary:
             time.sleep(1)
             try:
-                #pomiń dodatkowe słówko
                 time.sleep(1)
                 Do_not_know = driver.find_element_by_xpath('//*[@id="dont_know_new"]').click()
                 time.sleep(1)
                 Skip_question = driver.find_element_by_xpath('//*[@id="skip"]').click()
                 time.sleep(1)
-            except ElementNotInteractableException:
-                #Dodaj nowe słowo do słownika
-                
+            except ElementNotInteractableException:             
                 Answer = driver.find_element_by_xpath('//*[@id="answer"]')
                 
                 Answer.send_keys("a")
@@ -65,16 +64,13 @@ while i < len(users)+1:
                 time.sleep(1)
                 Next_question = driver.find_element_by_xpath('//*[@id="nextword"]').click()
                 time.sleep(1)
-                file = open("slownik.txt", "a", encoding='utf-8')
-                # Write some data to the file   
+                file = open("slownik.txt", "a", encoding='utf-8')  
                 file.write(usage_example)
                 file.write("|")
                 file.write(word)
                 file.write("|")
                 file.write(Translation)
                 file.write("\n")
-
-                # Close the file
                 file.close()
                 dictionary = GetDictionary.GetDictionary("slownik.txt")
 
